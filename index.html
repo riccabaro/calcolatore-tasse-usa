@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calcolatore Tasse USA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calcolo Costo Totale (USA)</h1>
+    <label for="price">Prezzo (USD):</label>
+    <input type="number" id="price" placeholder="Es. 100" step="0.01">
+
+    <label for="state">Seleziona Stato:</label>
+    <select id="state">
+      <option value="">--Seleziona--</option>
+      <option value="CA">California</option>
+      <option value="NY">New York</option>
+      <option value="TX">Texas</option>
+      <option value="FL">Florida</option>
+      <option value="OR">Oregon</option>
+    </select>
+
+    <button onclick="calculateTotal()">Calcola</button>
+
+    <div id="results" class="hidden">
+      <p><strong>Prezzo base:</strong> $<span id="basePrice"></span></p>
+      <p><strong>Tasse:</strong> $<span id="taxAmount"></span></p>
+      <p><strong>Totale:</strong> $<span id="totalUSD"></span></p>
+      <p><strong>Totale in Euro:</strong> €<span id="totalEUR"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
